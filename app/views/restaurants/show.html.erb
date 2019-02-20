@@ -3,6 +3,9 @@
 
 <% @restaurant.reviews.each do |review| %>
 
-<%= review.rating %>
+<%= review.rating %> | <%= review.content %>
+<hr>
 
 <% end %>
+
+<%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
